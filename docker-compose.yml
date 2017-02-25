@@ -1,0 +1,14 @@
+version: '2'
+services:
+  api:
+    build: .
+    container_name: phpsilexswaggerexample
+    volumes:
+      - ./web:/var/www/html/web
+      - ./src:/var/www/html/src
+      - ./app:/var/www/html/app
+      - ./vendor:/var/www/html/vendor
+      - ./composer.lock:/var/www/html/composer.lock
+      - ./composer.json:/var/www/html/composer.json
+    ports:
+      - 8080:80
