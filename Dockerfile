@@ -18,6 +18,7 @@ RUN apk update && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     composer self-update && \
+    cd /var/www/html && \
     composer install --working-dir=/var/www/html --no-interaction --no-progress
 
 # Configure nginx
